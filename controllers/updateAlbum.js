@@ -10,7 +10,7 @@ const updateAlbum = async (req, res)=>{
         res.status(http.StatusCodes.OK).send(del)
     } catch (error) {
         console.error(error)
-        res.status(http.StatusCodes.BAD_REQUEST).send("invalid Album ID")
+        res.status(http.StatusCodes.BAD_REQUEST).send("error updating Album")
     }
 }
 

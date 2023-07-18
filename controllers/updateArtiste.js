@@ -10,7 +10,7 @@ const updateArtiste = async (req, res)=>{
         res.status(http.StatusCodes.OK).send(del)
     } catch (error) {
         console.error(error)
-        res.status(http.StatusCodes.BAD_REQUEST).send("invalid Artiste ID")
+        res.status(http.StatusCodes.BAD_REQUEST).send("error updating Artiste")
     }
 }
 

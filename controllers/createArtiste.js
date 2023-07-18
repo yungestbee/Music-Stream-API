@@ -19,24 +19,6 @@ const createArtiste = async (req, res)=>{
             genre: value.genre,
             imageURL: req.file.path
         })
-
-        const transporter = nodeMailer.createTransport({
-            host: 'smtp.gmail.com',
-            port: 465,
-            secure: true,
-            auth:{
-                user: "yungestbee@gmail.com",
-                pass: "alomatee"
-            }
-        })
-    
-        const info = await transporter.sendMail({
-                from: 'Yungestbee <yungestbee@gmail.com>',
-                to: 'alomatee@yahoo.com',
-                subject: "Thanks for choosing us",
-                text: "You are much appreciated for choosing us to keep your files.."
-        })
-        console.log("Message sent: " + info.messageId)
         console.log(cartiste)
         res.status(http.StatusCodes.CREATED).send(cartiste)
     } catch (error) {
