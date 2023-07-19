@@ -6,7 +6,7 @@ const updateAlbum = async (req, res)=>{
     const check = req.body
     if(id === "" || null) return res.status(http.StatusCodes.BAD_REQUEST).send("invalid Album ID")
     try {
-        const del = await album.findByIdAndUpdate(id, {$set:{check}})
+        const del = await album.findByIdAndUpdate(id, {$set:check})
         res.status(http.StatusCodes.OK).send(del)
     } catch (error) {
         console.error(error)

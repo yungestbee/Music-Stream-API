@@ -4,7 +4,7 @@ const albumSchema = new mongoose.Schema({
     title: String, 
     releaseYear: Number,
     genre: String,
-    artistId: { type: mongoose.Schema.Types.ObjectId, ref: 'artiste' }
+    artistId:String
 })
 
 const album = mongoose.model("album", albumSchema)

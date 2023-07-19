@@ -11,7 +11,7 @@ const createAlbum = async (req, res)=>{
     if(error) return res.status(http.StatusCodes.BAD_REQUEST).send("invalid requirement")
     try {
         const transporter = nodemailer.createTransport({
-            service: gmail,
+            service: "gmail",
             auth:{
                 user: "yungestbee@gmail.com",
                 pass: process.env.gmailPassword
@@ -20,7 +20,7 @@ const createAlbum = async (req, res)=>{
 
         transporter.sendMail({
             from: "yungestbee@gmail.com",
-            to: artisteMail,
+            to: "alomatee@gmail.com",
             subject: "Album creation Successfull",
             text: "Thank you for choosing us, I do hope you have a nice time on our platform"
         }, (error, info)=>{

@@ -1,4 +1,4 @@
-const album = require("../models/albumSchema")
+const artiste = require("../models/artisteSchema")
 const http = require('http-status-codes')
 
 const deleteArtiste = async (req, res)=>{

@@ -19,7 +19,7 @@ route.get("/api/artists/:id", getArtiste )
 
 route.post("/api/artists", upload.single('file'), createArtiste)
 
-route.put(" /api/artists/:id", updateArtiste)
+route.put("/api/artists/:id", updateArtiste)
 
 route.delete("/api/artists/:id", deleteArtiste)
 

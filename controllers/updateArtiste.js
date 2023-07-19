@@ -1,4 +1,5 @@
 const http = require('http-status-codes')
+const artiste = require("../models/artisteSchema")
 
 
 const updateArtiste = async (req, res)=>{
@@ -6,7 +7,8 @@ const updateArtiste = async (req, res)=>{
     const check = req.body
     if(id === "" || null) return res.status(http.StatusCodes.BAD_REQUEST).send("invalid Artiste ID")
     try {
-        const del = await artiste.findByIdAndUpdate(id, {$set:{check}})
+        console.log(check)
+        const del = await artiste.findByIdAndUpdate(id, {$set:check})
         res.status(http.StatusCodes.OK).send(del)
     } catch (error) {
         console.error(error)
